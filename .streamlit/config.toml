@@ -1,0 +1,10 @@
+[theme]
+base="light"
+font = "Poppins:https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+baseFontSize = 14
+
+[theme.sidebar]
+primaryColor="#008CA5"
+
+
+
