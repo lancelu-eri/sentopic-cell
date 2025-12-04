@@ -5,14 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "bertopic>=0.17.3",
     "hdbscan>=0.8.40",
+    "model2vec>=0.7.0",
     "numpy>=2.3.5",
     "pandas>=2.3.3",
     "plotly>=6.5.0",
     "pydantic>=2.12.4",
+    "pyyaml>=6.0.3",
     "scikit-learn>=1.7.2",
     "streamlit[charts]>=1.51.0",
+    "tqdm>=4.67.1",
     "umap-learn>=0.5.9.post2",
 ]
 

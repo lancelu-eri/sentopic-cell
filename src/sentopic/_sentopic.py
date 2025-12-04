@@ -6,10 +6,10 @@ from bertopic.representation import (
     MaximalMarginalRelevance,
 )
 from hdbscan import HDBSCAN
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 from umap.umap_ import UMAP
-
+from model2vec import StaticModel
 
 class SenTopic:
     """SenTopic combines the BERTopic topic modeling technique with sentiment analysis."""
@@ -34,9 +34,9 @@ class SenTopic:
         """
         ## default settings for embedding, umap, hdbscan, vectorizer, and representation 
         if embedding_model is None:
-            self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-        elif isinstance(embedding_model, str):
-            self.embedding_model = SentenceTransformer(embedding_model)
+            self.embedding_model = StaticModel.from_pretrained("minishlab/potion-base-8M")
+        # elif isinstance(embedding_model, str):
+        #     self.embedding_model = SentenceTransformer(embedding_model)
 
         if umap_model is not None:
             self.umap_model = umap_model
