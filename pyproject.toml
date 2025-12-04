@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "bertopic==0.17.4",
     "hdbscan>=0.8.40",
     "model2vec>=0.7.0",
     "numpy>=2.3.5",
