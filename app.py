@@ -29,8 +29,8 @@ COLORS = {
 #constants
 DATE_COLUMN = 'date/time'
 BASE_URL = Path.cwd()
-REVIEW_DATA_PATH = BASE_URL / Path(r'data\selected_reviews.csv')
-OFFERING_DATA_PATH = BASE_URL / Path(r'data\selected_offerings.csv')
+REVIEW_DATA_PATH = BASE_URL / Path('data') / Path('selected_reviews.csv')
+OFFERING_DATA_PATH = BASE_URL / Path('data') / Path('selected_offerings.csv')
 HOTEL_NAMES = ['Hotel A', 'Hotel B', 'Hotel C']
 EMBEDDING_MODEL = 'all-MiniLM-L12-v2'
 SENTIMENT_MODEL ='lxyuan/distilbert-base-multilingual-cased-sentiments-student'
@@ -277,7 +277,7 @@ def main()-> None:
     with st.spinner("Loading data..."):
         #check if processed data exists
         print('Loading processed data...')
-        final_df = load_data(BASE_URL / Path(r'data\processed_chunks.csv'))
+        final_df = load_data(BASE_URL / Path('data') / Path('processed_chunks.csv'))
 
     with st.spinner("Performing topic modeling..."):
         print('Fitting SenTopic model...')
