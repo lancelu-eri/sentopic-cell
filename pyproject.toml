@@ -1,0 +1,59 @@
+[project]
+name = "sentopic-cell"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bertopic>=0.17.4",
+    "hdbscan>=0.8.40",
+    "model2vec>=0.7.0",
+    "numpy>=2.3.5",
+    "pandas>=2.3.3",
+    "plotly>=6.5.0",
+    "pydantic>=2.12.4",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.7.2",
+    "streamlit[charts]>=1.51.0",
+    "tqdm>=4.67.1",
+    "umap-learn>=0.5.9.post2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.5",
+]
+
+[tool.uv]
+dependency-metadata = [
+    { name = "bertopic", version = "0.17.4"},
+]
+
+[tool.ruff]
+# Set the maximum line length to 79.
+line-length = 79
+
+[tool.ruff.lint]
+extend-select = [
+    "ANN",
+    "S",
+    "B",
+    "C4",
+    "EM",
+    "FA",
+    "ISC",
+    "ICN",
+    "LOG",
+    "SIM",
+    "PTH",
+    "I",
+    "C90",
+    "PD",
+    "PERF",
+    "D",
+    "UP",
+    "FURB",
+    "RUF",
+    "TRY",
+]
+extend-ignore = ["ANN401", "D105", "D107", "D202", "D203", "D213"]
